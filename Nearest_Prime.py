@@ -1,4 +1,4 @@
-def prime(j):
+def is_prime(j):
     i=2
     v=0
     while i!=j:
@@ -7,16 +7,18 @@ def prime(j):
         i+=1
     if v==0:
         return j
+
+
 x = int(input())
 for i in range(x):
     y = int(input())
     b=y
-    for j in range(y,1,-1):
-        if prime(j):
+    for j in range(y,2-1,-1):
+        if is_prime(j):
             n=j
             break
-    for k in range(2,y):
-        if prime(b):
+    while b!=0:
+        if is_prime(b):
             m=b
             break
         b+=1
