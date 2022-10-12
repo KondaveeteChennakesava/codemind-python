@@ -1,3 +1,3 @@
-x=int(input())
-x=x*(x-3)/2
-print(int(x))
+a=int(input())
+b=(a*(a-3))//2
+print(b)
