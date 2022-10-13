@@ -1,18 +1,13 @@
-def fun(n):
-  d=0
-  while(n!=0):
-    d=n%10
-    n=n//10
-    if(d==2 or d==3 or d==9):
+def pr(a):
+    r=a%10
+    if r==2 or r==3 or r==9:
         return True
     else:
         return False
-n=int(input())
-c=0
-for i in range(n):
-  c=0
-  n,m=map(int,input().split())
-  for i in range(n,m+1):
-    if(fun(i)):
-       c+=1
-  print(c)
+for i in range(int(input())):
+    a,b=map(int,input().split())
+    c=0
+    for j in range(a,b+1):
+        if pr(j)==True:
+            c+=1
+    print(c)
