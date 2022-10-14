@@ -1,16 +1,15 @@
-x=int(input())
-s=0
-d=0
-while x!=0:
-    n=x%10
-    x=x//10
-    if(n%2==0):
-        s+=1
+n=int(input())
+ec,dc=0,0
+while n>0:
+    r=n%10
+    if r%2==0:
+        ec=1
     else:
-        d+=1
-if d>0 and s>0:
-    print('Mixed')
-elif d>0 and s==0:
-    print('Odd')
-elif d==0 and s>0:
-    print('Even')
+        dc=1
+    n//=10
+if ec==1 and dc==0:
+    print("Even")
+elif ec==0 and dc==1:
+    print("Odd")
+else:
+    print("Mixed")
