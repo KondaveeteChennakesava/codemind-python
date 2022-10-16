@@ -1,6 +1,8 @@
-import math
-n=int(input())
-for i in range(0,n):
-    i=int(input())
-    x=math.factorial(i)
-    print(x)
+def fact(a):
+    if a==1:
+        return a
+    else:
+        return a*fact(a-1)
+for i in range(int(input())):
+    a=int(input())
+    print(fact(a))
