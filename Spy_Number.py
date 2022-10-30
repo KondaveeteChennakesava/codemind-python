@@ -1,11 +1,11 @@
-n=int(input())
-sum,pro=0,1
-while n>0:
-    d=n%10
-    sum+=d
-    pro*=d
-    n//=10
-if(sum==pro):
-    print('Spy Number')
+a=int(input())
+s,p=0,1
+while a>0:
+    r=a%10
+    a=a//10
+    s+=r
+    p*=r
+if s==p:
+    print("Spy Number")
 else:
-    print('Not Spy Number')
+    print("Not Spy Number")
