@@ -1,17 +1,17 @@
-x = int(input())
-n = x**2
-s=0
-while x!=0:
-    v = x%10
-    s = s*10+v
-    x=x//10
-m = s**2
-a=0
-while m!=0:
-    c = m%10
-    a = a*10+c
-    m = m//10
-if n==a:
+a=int(input())
+asq=a**2
+arev=0
+while a>0:
+    r=a%10
+    a//=10
+    arev=arev*10+r
+arevsq=arev**2
+arevsqrev=0
+while arevsq>0:
+    r=arevsq%10
+    arevsq//=10
+    arevsqrev=arevsqrev*10+r
+if asq==arevsqrev:
     print("True")
 else:
     print("False")
