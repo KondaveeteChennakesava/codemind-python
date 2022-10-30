@@ -1,16 +1,17 @@
-def prime(n):
-    if n<2:
-        return False
-    else:
-        for i in range(2,int(n**0.5)+1):
-            if n%i==0:
+import math
+def pr(a):
+    if a>1:
+        for i in range(2,int(math.sqrt(a)+1)):
+            if a%i==0:
                 return False
-        else:
-            return True
-n=int(input())
-m=int(input())
-s1=n+m
-s=n+m+1
-while prime(s)==False:
-    s+=1
-print(s-s1)
+                break
+    elif a==1:
+        return False
+    return True
+a=int(input())
+b=int(input())
+c=a+b
+for i in range(c+1,1100):
+    if pr(i)==True:
+        print(i-c)
+        break
