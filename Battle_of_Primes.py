@@ -8,6 +8,8 @@ def pr(a):
     elif a==1:
         return False
     return True
+
+
 a=int(input())
 b=int(input())
 c=a+b
