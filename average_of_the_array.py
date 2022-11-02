@@ -1,5 +1,7 @@
-n=int(input())
-a=list(map(int,input().split()))
-s=sum(a)
-avg=s/n
-print('%.2f'%avg)
+a=int(input())
+l=list(map(int,input().split()))
+oc=0
+for i in range(len(l)):
+    oc+=l[i]
+avg=oc/a
+print("%.2f"%avg)
