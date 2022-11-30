@@ -1,8 +1,8 @@
 n=int(input())
-a=list(map(int,input().split()))
-b,c=map(int,input().split())
+l=list(map(int,input().split()))
+a,b=map(int,input().split())
 s=0
-for i in a:
-    if(i>=b and i<=c):
+for i in range(a,b+1):
+    if i in l:
         s+=i
 print(s)
