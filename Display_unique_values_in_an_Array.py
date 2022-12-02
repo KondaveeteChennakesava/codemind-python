@@ -1,9 +1,10 @@
-n=int(input())
-c=0
-a=list(map(int,input().split()))
-for i in a:
-  if(a.count(i)==1):
-     print(i,end=" ")
-     c+=1
-if(c==0):
-   print("-1")
+a=int(input())
+l=list(map(int,input().split()))
+k=[]
+for i in l:
+    if l.count(i)==1:
+        k.append(i)
+if len(k)!=0:
+    print(*k)
+else:
+    print(-1)
