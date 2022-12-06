@@ -1,14 +1,15 @@
-def digit(n):
+def cnt(a):
     c=0
-    while n>0:
+    while a>0:
+        r=a%10
+        a//=10
         c+=1
-        n//=10
     return c
 n=int(input())
-m=list(map(int,input().split()))
-f=digit(max(m))
-c=0
-for i in m:
-    if digit(i)==f:
-        c+=1
-print(c)
+l=list(map(int,input().split()))
+k=max(l)
+cn=0
+for i in l:
+    if cnt(k)==cnt(i):
+        cn+=1
+print(cn)
