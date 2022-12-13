@@ -1,30 +1,27 @@
-def is_prime(j):
-    i=2
-    v=0
-    while i!=j:
-        if j%i==0:
-            v=1
-        i+=1
-    if v==0:
-        return j
+from math import *
+def pr(a):
+    if a>0:
+        for i in range(2,int(sqrt(a)+1)):
+            if a%i==0:
+                return False
+    elif a==1:
+        return False
+    return True
 
-
-x = int(input())
-for i in range(x):
-    y = int(input())
-    b=y
-    for j in range(y,2-1,-1):
-        if is_prime(j):
-            n=j
+for i in range(int(input())):
+    a=int(input())
+    #print(a)
+    for k in range(a,99999999):
+        if pr(k)==True:
+            gp=k
             break
-    while b!=0:
-        if is_prime(b):
-            m=b
+    for j in range(a,-1,-1):
+        if pr(j)==True:
+            sp=j
             break
-        b+=1
-    if (y-n)<(m-y):
-        print(n)
-    elif (y-n)==(m-y):
-        print(n)
+    fc=gp-a
+    bc=a-sp
+    if fc>=bc:
+        print(sp)
     else:
-        print(m)
+        print(gp)
