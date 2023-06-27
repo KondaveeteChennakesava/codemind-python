@@ -1,17 +1,15 @@
-n=int(input())
-a=[]
-b=[]
-for j in range(2):
-    for l in range(n):
-        m=list(map(int,input().split()))
-        if j==0:
-            for h in m:
-                a.append(h)
-        if j==1:
-            for g in m:
-                b.append(g)
-for k in range(n*n):
-    if k%n==(n-1):
-        print(b[k]+a[k])
-    else:
-        print(b[k]+a[k],end=' ')
+n = int(input())
+m1,m2,m3=[],[],[]
+for i in range(n):
+    m1.append(list(map(int,input().split())))
+for i in range(n):
+    m2.append(list(map(int,input().split())))
+for i in range(n):
+    tl=[]
+    for j in range(n):
+        tl.append(m1[i][j] + m2[i][j])
+    m3.append(tl)
+for i in range(n):
+    for j in range(n):
+        print(m3[i][j],end=' ')
+    print()
