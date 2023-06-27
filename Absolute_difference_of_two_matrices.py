@@ -1,18 +1,13 @@
-n=int(input())
-s=[0]*(n*n)
-a=[]
-b=[]
-for j in range(2):
-    for l in range(n):
-        m=list(map(int,input().split()))
-        if j==0:
-            for h in m:
-                a.append(h)
-        if j==1:
-            for g in m:
-                b.append(g)
-for k in range(n*n):
-    if k%n==(n-1):
-        print(abs(b[k]-a[k]))
-    else:
-        print(abs(b[k]-a[k]),end=' ')
+n = int(input())
+m1,m2,m3 = [],[],[]
+for i in range(n):
+    m1.append(list(map(int,input().split())))
+for i in range(n):
+    m2.append(list(map(int,input().split())))
+for i in range(n):
+    l=[]
+    for j in range(n):
+        l.append(abs(m1[i][j]-m2[i][j]))
+    m3.append(l)
+for i in m3:
+    print(*i)
