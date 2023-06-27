@@ -1,7 +1,6 @@
-a,b=map(int,input().split())
-for i in range(a):
-    arr=list(map(int,input().split()))
-    s=0
-    for i in arr:
-        s+=i
-    print(s,end=" ")
+n,m = map(int,input().split())
+m1 = []
+for i in range(n):
+    m1.append(list(map(int,input().split())))
+for i in m1:
+    print(sum(i),end=' ')
