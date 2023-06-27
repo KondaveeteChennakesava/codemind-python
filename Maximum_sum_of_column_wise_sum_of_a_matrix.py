@@ -1,7 +1,13 @@
-n,m=map(int,input().split())
-s=[0]*m
-for j in range(n):
-    m=list(map(int,input().split()))
-    for i in range(len(m)):
-        s[i]=s[i]+m[i]
-print(max(s))
+n,m = map(int,input().split())
+m1,m2 = [],[]
+for i in range(n):
+    m1.append(list(map(int,input().split())))
+for i in range(m):
+    l = []
+    for j in range(n):
+        l.append(m1[j][i])
+    m2.append(l)
+k = []
+for i in m2:
+    k.append(sum(i))
+print(max(k))
