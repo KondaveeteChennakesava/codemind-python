@@ -1,9 +1,9 @@
-n,x=map(int,input().split())
-s=0
-for j in range(n):
-    m=list(map(int,input().split()))
-    for i in range(len(m)):
-        if j!=0 and j!=(n-1):
-            if i!=0 and i!=(len(m)-1):
-                s=s+m[i]
-print(s)
+n,m = map(int,input().split())
+m1,m2 = [],[]
+for i in range(n):
+    m1.append(list(map(int,input().split())))
+cnt = 0
+for i in range(1,n-1):
+    for j in range(1,m-1):
+        cnt += m1[i][j]
+print(cnt)
