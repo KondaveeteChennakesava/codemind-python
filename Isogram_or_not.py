@@ -1,10 +1,9 @@
-s=input()
-s=s.lower()
-c=0
+s = input()
+x = ''
 for i in s:
-    if s.count(i)==1:
-        c+=1
-if c==len(s):
+    if i not in x:
+        x += i
+if len(x) == len(s):
     print("True")
 else:
     print("False")
