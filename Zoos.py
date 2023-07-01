@@ -1,14 +1,7 @@
-string = input()
-c=0
-d=0
-str=0;
-while str < len(string):
-    if(string[str] == 'z'):
-        c+=1
-    elif(string[str] =='o'):
-        d+=1
-    str+=1
-if(2*c == d):
+n = input()
+z = n.count('z')
+o = n.count('o')
+if z == o/2:
     print("Yes")
 else:
     print("No")
