@@ -1,10 +1,10 @@
-n=input()
-a=[]
+n = input()
+d = '0123456789'
+cnt = 0
 for i in n:
-    if i.isdigit():
-        a.append(i)
-h= len(a)
-if h==0:
-    print("Doesn't contain digit")
+    if i in d:
+        cnt += 1
+if cnt>0:
+    print(f"Contains {cnt} digit")
 else:
-    print("Contains %d digit"%h)
+    print("Doesn't contain digit")
