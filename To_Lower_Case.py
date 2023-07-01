@@ -1,2 +1,1 @@
-case=input()
-print(case.lower())
+print(input().lower())
