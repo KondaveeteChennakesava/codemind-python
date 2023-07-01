@@ -1,11 +1,12 @@
-n=int(input())
-while n:
-    a=input()
-    c=0
-    for i in a:
-        if i.isdigit():
-            c+=1
-    if c>0:
-        print('Yes')
+for i in range(int(input())):
+    n = input()
+    d = '0123456789'
+    cnt = 0
+    for i in n:
+        if i in d:
+            cnt = 1
+            break
+    if cnt == 1:
+        print("Yes")
     else:
-        print('No')
+        print("No")
