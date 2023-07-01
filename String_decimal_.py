@@ -1,13 +1,8 @@
-a=int(input())
-d=0
-for i in range(a):
-    n=input()
-    c=len(n)
-    for j in n:
-        if j>='0' and j<='9':
-            d+=1
-    if c==d:
-        print(True)
-    else:
-        print(False)
-    d=0
+for i in range(int(input())):
+    n = input()
+    res = True
+    num = '0123456789'
+    for i in n:
+        if i not in num:
+            res = False
+    print(res)
