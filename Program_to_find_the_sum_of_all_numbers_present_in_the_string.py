@@ -1,8 +1,6 @@
-def sum_digits(str):
-    sum = 0
-    for c in str:
-        if c.isdigit() == True:
-            sum += int(c)
-    return sum
-string = input()
-print(sum_digits(string))
+n = input()
+cnt = 0
+for i in n:
+    if i.isdigit():
+        cnt += int(i)
+print(cnt)
