@@ -1,6 +1,7 @@
-s=input()
-l=[]
-for i in s:
-    if i.isdigit():
-        l.append(int(i))
-print(sum(l))
+n = input()
+d = '0123456789'
+cnt = 0
+for i in n:
+    if i in d:
+        cnt += int(i)
+print(cnt)
