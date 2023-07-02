@@ -1,12 +1,7 @@
-n=input()
-c=0
+n = input().lower()
+k = -1
 for i in range(len(n)):
-    for j in range(len(n)):
-        if n[i]==n[j]:
-            c+=1
-    if c==1:
-        print(i)
+    if n.count(n[i]) == 1:
+        k = i
         break
-    c=0
-else:
-    print('-1')
+print(k)
