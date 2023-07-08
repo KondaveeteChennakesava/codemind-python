@@ -1,6 +1,6 @@
-n=int(input())
-a=list(map(int,input().split()))
-for i in range(n-1,n//2-1,-1):
-    print(a[i],end=" ")
+n = int(input())
+l = list(map(int,input().split()))
+k = l[n//2:n][::-1]
 for i in range(n//2):
-    print(a[i],end=" ")
+    k.append(l[i])
+print(*k)
